@@ -1,0 +1,31 @@
+<div id="login_main_outer">
+    <div id="main">
+        <div id="credentials">
+        
+                <input type="text" placeholder=" enter your first name" #signup_1 id="first_name" (keyup.enter)="signup_2.focus()">
+                <input type="text" placeholder=" enter your last name" #signup_2 id="last_name" (keyup.enter)="signup_3.focus()">
+                <input type="text" placeholder=" enter your Mobile number" #signup_3 id="ph" (keyup.enter)="signup_4.focus()">
+                <input type="email" placeholder=" enter your email" #signup_4 id="email" (keyup.enter)="signup_5.focus()">
+                <input type="date" placeholder=" enter your birth date" #signup_5 id="date" (keyup.enter)="signup_6.focus()">
+                <input type="text" placeholder=" enter your address" #signup_6 id="add">
+            
+        </div>
+        <div id="gender">
+            <p>Enter your gender</p>
+            <input type="radio" id="male" name="gen" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gen" value="female">
+            <label for="female">Female</label>
+        </div>
+        <button (click)="sign_up_submit(msg)">Sign up</button>
+        <p #msg></p>
+       <div>Already have a account <pre (click)="login()">Login</pre></div>
+    </div>
+</div>
+
+<div *ngIf="pass_done.st">
+    <div>
+        <p>Your ID:> {{pass_done.id}}</p>
+        <p>Password:> {{pass_done.pass}}</p>
+    </div>
+</div>

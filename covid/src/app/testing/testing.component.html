@@ -1,0 +1,49 @@
+<div id="testing_main">
+    <div id="personaldetails">
+        <p>Name:</p>
+        <input type="text" id="name" placeholder="Type here">
+        <p>Email:</p>
+        <input type="text" id="email" placeholder="Type here">
+        <p>mobile: </p>
+        <input type="text" id="mobile" placeholder="Type here">
+        <p>Gender:</p>
+        <div>
+            <input type="radio" name="gender" value="male" id="gender_male"><label for="gender_male">male</label>
+            <input type="radio" name="gender" value="female" id="gender_female"><label for="gender_female">female</label>
+            <input type="radio" name="gender" value="others" id="gender_others"><label for="gender_others">others</label>
+        </div>
+        <p>adhar:</p>
+        <input type="text" id="adhar" placeholder="Type here">
+        <p>adress:</p>
+        <textarea cols="30" rows="10" id="address" [value]="address" placeholder="Type here"></textarea>
+        <p>D.O.B:</p>
+        <input type="date" id="dob">
+        
+    </div>
+    <div id="timeslots">
+        <div>
+            <h4>Select test type</h4>
+            <p><input type="radio" id="testing_type_pcr" name="test_type" value="PCR"><label for="testing_type_pcr">PCR</label></p>
+            <p><input type="radio" id="testing_type_ag" name="test_type" value="Anti-gen"><label for="testing_type_ag">Antigen</label></p>
+            <p><input type="radio" id="testing_type_ab" name="test_type" value="Anti-body"><label for="testing_type_ab">anti-body</label></p>
+            <p><input type="radio" id="testing_type_rapid" name="test_type" value="rapid"><label for="testing_type_rapid">rapid</label></p>
+            <p><input type="radio" id="testing_type_saliva" name="test_type" value="Saliva"><label for="testing_type_saliva">Saliva</label></p>
+        </div>
+        <h4 class="date">Date</h4>
+        <input type="date" id="date">
+        <div>
+            <h4>Timeslot</h4>
+            <p><input type="radio" id="timeslot_1" name="time_slot" value="1"><label for="timeslot_1">8:00-9:00</label></p>
+            <p><input type="radio" id="timeslot_2" name="time_slot" value="2"><label for="timeslot_2">10:00-11:00</label></p>
+            <p><input type="radio" id="timeslot_3" name="time_slot" value="3"><label for="timeslot_3">12:00-13:00</label></p>
+            <p><input type="radio" id="timeslot_4" name="time_slot" value="4"><label for="timeslot_4">15:00-16:00</label></p>
+            <p><input type="radio" id="timeslot_5" name="time_slot" value="5"><label for="timeslot_5">17:00-18:00</label></p>
+            <p><input type="radio" id="timeslot_6" name="time_slot" value="6"><label for="timeslot_6">19:00-20:00</label></p>
+        </div>
+        <div class="ctrl">
+            <button (click)="submit_req($event)">Submit</button>
+            <button (click)="reset_app()">Reset</button>
+        </div>
+    </div>
+</div>
+

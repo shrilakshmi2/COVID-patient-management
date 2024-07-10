@@ -1,0 +1,17 @@
+<div id="main">
+    <div id="sidebar">
+        <div>
+            <img src="/assets/covid.jpg" alt="">
+        </div>
+        <p (click)="changemode('1')" [class]="this.mode.mode_class['1']">Description</p>
+        <p (click)="changemode('2')" [class]="this.mode.mode_class['2']">Testing</p>
+        <p (click)="changemode('3')" [class]="this.mode.mode_class['3']">Check result</p>
+        <p (click)="changemode('4')" [class]="this.mode.mode_class['4']">Admin</p>
+    </div>
+    <div id="content">
+        <app-description *ngIf="mode.mode=='1'"></app-description>
+        <app-result *ngIf="mode.mode=='3'"></app-result>
+        <app-testing *ngIf="mode.mode=='2'"></app-testing>
+        <app-login *ngIf="mode.mode=='4'"></app-login>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+<div id="main">
+  <div id="navbar">
+    <h3>Covid 19</h3>
+    <div>
+      <p (click)="scrollto(about)">About coronavirus</p>
+      <p (click)="scrollto(sym)">Symptoms</p>
+      <p (click)="scrollto(prev)">Prevention</p>
+      <p (click)="scrollto(live_up)">Live Updates</p>
+      <p (click)="collect_live_updates()">Refresh</p>
+    </div>
+  </div>
+  <div id="content_des">
+    <div id="front_page">
+      <div>
+        <h2>COVID-19</h2>
+        <h3 class="fr_h3">Hospital for testing and analysis</h3>
+      </div>
+    </div>
+    <div #about id="about">
+      <div>
+        <h3>About coronavirus</h3>
+        <ul>
+          <li>Transmission: COVID-19 spreads through respiratory droplets when an infected person coughs, sneezes, or talks.</li>
+          <li>Symptoms: Common symptoms include fever, cough, shortness of breath, fatigue, and loss of taste or smell.</li>
+          <li>Prevention: Preventive measures include wearing masks, practicing physical distancing, and frequent handwashing.</li>
+          <li>Vaccination: Vaccines are available to prevent COVID-19 and are crucial for achieving herd immunity.</li>
+          <li>Variants: Different strains of the virus, known as variants, have emerged globally, some of which may be more transmissible.</li>
+          <li>Testing: Testing helps identify and isolate cases, preventing further spread of the virus.</li>
+          <li>Public Health Measures: Governments implement measures such as lockdowns and travel restrictions to control outbreaks and protect public health.</li>
+          <li>Origin: Different strains of the virus, known as variants, have emerged globally, some of which may be more transmissible.
+            <ul>
+              <li>Geographical Distribution: Variants have been identified in various countries around the world.</li>
+              <li>Genetic Mutations: Mutations in the virus's genetic material contribute to the emergence of variants.</li>
+              <li>Epidemiological Factors: Factors such as population density and social interactions influence variant spread.</li>
+              <li>Impact on Transmission: Some variants may have increased transmissibility compared to the original strain.</li>
+              <li>Response Strategies: Health authorities monitor and respond to variants by enhancing surveillance and adjusting public health measures.</li>
+            </ul>
+          </li>
+        </ul> 
+      </div>     
+    </div>
+    <div #sym id="symptoms">
+      <div>
+        <h3>Symptems of covid-19</h3>
+      <ul>
+        <li><strong>Fever:</strong> Elevated body temperature is a common symptom of COVID-19. It may vary from mild to severe.</li>
+        <li><strong>Cough:</strong> Persistent coughing, often dry and continuous, can be a symptom of COVID-19.</li>
+        <li><strong>Shortness of breath:</strong> Difficulty breathing or shortness of breath, especially during physical exertion, may indicate COVID-19 infection.</li>
+        <li><strong>Fatigue:</strong> Feeling unusually tired or exhausted, even after adequate rest, is a common symptom of COVID-19.</li>
+        <li><strong>Loss of taste or smell:</strong> An abrupt loss of taste or smell, known as anosmia, can occur with COVID-19 infection.</li>
+        <li><strong>Muscle or body aches:</strong> Generalized muscle pain or body aches can be present in individuals with COVID-19.</li>
+        <li><strong>Sore throat:</strong> Soreness or irritation in the throat, along with difficulty swallowing, may be a symptom of COVID-19.</li>
+        <li><strong>Headache:</strong> Persistent headaches, ranging from mild to severe, can be associated with COVID-19 infection.</li>
+        <li><strong>Congestion or runny nose:</strong> Nasal congestion or a runny nose may occur, although it's less common than other symptoms.</li>
+        <li><strong>Nausea or vomiting:</strong> Some individuals with COVID-19 may experience gastrointestinal symptoms like nausea or vomiting.</li>
+        <li><strong>Diarrhea:</strong> Digestive issues, including diarrhea, can occur in COVID-19 patients, especially in combination with other symptoms.</li>
+      </ul>      
+      </div>
+    </div>
+    <div #prev id="Prevention_des">
+      <div>
+        <h3>Prevention measures</h3>
+        <ul>
+          <li><strong>Wear a mask:</strong> Properly wearing a mask over your nose and mouth can help prevent the spread of respiratory droplets containing the virus.</li>
+          <li><strong>Practice physical distancing:</strong> Maintain a distance of at least 6 feet (about 2 meters) from others, especially in crowded or enclosed spaces.</li>
+          <li><strong>Wash your hands frequently:</strong> Use soap and water for at least 20 seconds, especially after being in public places, touching surfaces, or coughing/sneezing.</li>
+          <li><strong>Use hand sanitizer:</strong> If soap and water are not readily available, use a hand sanitizer with at least 60% alcohol content.</li>
+          <li><strong>Avoid large gatherings:</strong> Limit close contact with individuals outside your household, particularly in settings where physical distancing is difficult to maintain.</li>
+          <li><strong>Cover your mouth and nose:</strong> Use a tissue or your elbow to cover your mouth and nose when coughing or sneezing, and dispose of tissues properly.</li>
+          <li><strong>Clean and disinfect frequently touched surfaces:</strong> Regularly clean and disinfect surfaces such as doorknobs, light switches, countertops, and electronics.</li>
+          <li><strong>Get vaccinated:</strong> COVID-19 vaccines are effective in preventing severe illness, hospitalization, and death from the virus. Follow vaccination guidelines and recommendations from health authorities.</li>
+          <li><strong>Stay informed:</strong> Stay updated with reliable information from health authorities and follow guidelines and recommendations to reduce the risk of COVID-19 transmission.</li>
+        </ul>
+      </div>
+    </div>
+    <div #live_up id="live_updates">
+      <div>
+        <h3>Live Updates</h3>
+        <ul>
+          <li>Last time origin refreshed: <strong>{{live["lastOringinup"]}}</strong></li>
+          <li>Last time data refreshed: <strong>{{live['refresh']}}</strong></li>
+          <li class="have_ul">
+            <strong>Summary:</strong>
+            <ul>
+              <li>Confiremed total cases in India: <strong>{{live.summary['total']}}</strong></li>
+              <li>Confiremed Indian cases: <strong>{{live.summary['confirmedCasesIndian']}}</strong></li>
+              <li>Confiremed Foreign cases in India: <strong>{{live.summary['confirmedCasesForeign']}}</strong></li>
+              <li>Confiremed unindentified person: <strong>{{live.summary['confirmedButLocationUnidentified']}}</strong></li>
+              <li>Total deaths: <strong style="color: brown;">{{live.summary['deaths']}}</strong></li>
+              <li>Total Discharged: <strong style="color: green;">{{live.summary['discharged']}}</strong></li>
+            </ul>
+          </li>
+          <li class="have_ul">
+            <strong>In karnataka:</strong>
+            <ul>
+              <li>Confiremed total cases: <strong>{{live.karnataka['totalConfirmed']}}</strong></li>
+              <li>Confiremed Indian cases: <strong>{{live.karnataka['confirmedCasesIndian']}}</strong></li>
+              <li>Confiremed Foreign cases: <strong>{{live.karnataka['confirmedCasesForeign']}}</strong></li>
+              <li>Confiremed Deaths: <strong style="color: brown;">{{live.karnataka['deaths']}}</strong></li>
+              <li>Total Discharged: <strong style="color: green;">{{live.karnataka['discharged']}}</strong></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

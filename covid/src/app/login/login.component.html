@@ -1,0 +1,10 @@
+<div id="login_outer">
+    <div id="login_inner">
+        <h3>Login here</h3>
+        <p>Username</p>
+        <input type="text" #username placeholder="ID">
+        <p>Password</p>
+        <input type="password" #pass placeholder="password">
+        <h3 id="buuton_h3"><button (click)="login_done(username.value,pass.value)">Login</button></h3>
+    </div>
+</div>

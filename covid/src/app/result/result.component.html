@@ -1,0 +1,60 @@
+<div id="result">
+    <div id="results_outer">
+        <h3>Check your results here</h3>
+        <p>Application ID:</p>
+        <input type="text" placeholder="ID" #id>
+        <button (click)="check_result(id.value)">Search</button>
+    </div>
+</div>
+
+<div id="view" *ngIf="view.status">
+    <div id="view_inner">
+        <h3 id="view_inner_h3">{{view.data['app_id']}}</h3>
+        <div id="card">
+            <p>name: {{view.data['name']}}</p>
+            <p>mobile: {{view.data['mobile']}}</p>
+            <p>Email: {{view.data['email']}}</p>
+            <p>adhar: {{view.data['adhar']}}</p>
+            <p>Gender: {{view.data['gender']}}</p>
+            <div>Result: <h3 [class]="view.class"> {{view.data['result']}}</h3></div>
+            <div>Docter contact: {{view.data['doc_id']}} <button (click)="view_docter(view.data['doc_id'])">View details</button></div>
+            <p>Applied time: {{view.data['applied_time']}}</p>
+        </div>
+        <div *ngIf="view.class=='green'" id="prevention">
+            <h4>Prevention of Covid</h4>
+            <ul>
+                <li>Mask Up: Wear masks properly to cover your nose and mouth in public settings, especially when physical distancing is difficult.</li>
+                <li>Keep Distance: Maintain at least 6 feet of distance from others outside your household to reduce the risk of transmission.</li>
+                <li>Clean Hands: Wash hands often with soap and water for at least 20 seconds or use hand sanitizer with at least 60% alcohol.</li>
+                <li>Stay Updated: Stay informed about COVID-19 guidelines and recommendations from trusted sources.</li>
+                <li>Get Vaccinated: When eligible, get vaccinated to protect yourself and others from severe illness and prevent the spread of the virus.</li>
+            </ul>
+        </div>
+        <div *ngIf="view.class=='red'" id="precautions">
+            <h4>TODO</h4>
+            <ul>
+                <li>Isolate at home and avoid contact with others if you test positive for COVID-19.</li>
+                <li>Notify close contacts to encourage them to get tested and take precautions.</li>
+                <li>Monitor symptoms closely and seek medical attention if they worsen.</li>
+                <li>Practice good hand hygiene and respiratory etiquette to prevent spreading the virus.</li>
+                
+            </ul>
+            <a href="https://www.cdc.gov/coronavirus/2019-ncov/your-health/isolation.html" target="_blank">For more info click here</a>
+        </div>
+        <div>
+            <button (click)="done()" class="done">Done</button>
+            <button (click)="download()">Download PDF</button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="doc.status" id="doc_view">
+    <div>
+        <h3 (click)="doc.status=false;doc.data={}">X</h3>
+        <p>Name: {{doc.data['name']}}</p>
+        <p>Email: {{doc.data['email']}}</p>
+        <p>Mobile: {{doc.data['mobile']}}</p>
+        <p>Total tests conducted(experience): {{doc.data['total']}}</p>
+    </div>
+</div>

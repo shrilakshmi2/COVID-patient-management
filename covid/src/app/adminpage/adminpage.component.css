@@ -1,0 +1,224 @@
+#admin,#docter{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: cadetblue;
+    overflow: scroll;
+}
+.h3{
+    height: 30px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+#applications #search_bar{
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.896);
+}
+#applications #search_bar p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.selected{
+    background-color: rgba(0, 0, 0, 0.544);
+}
+#applications #search_bar input{
+    margin-left: 5px;
+    background-color: black;
+    height: 40px;
+    width: 35%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+#applications #search_bar button{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    border: none;
+    background-color: darkslategray;
+    color: white;
+}
+#collecter_result{
+    height: 90vh;
+    width: 99%;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 10px;
+    border-radius: 10px;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 50vh;
+}
+#collecter_result div{
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+}
+#collecter_result div h3{
+    width: 100%;
+    height: 30px;
+    display: grid;
+    place-items: center;
+}
+#collecter_result div p{
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 0px;
+}
+#collecter_result div button{
+    background-color: cadetblue;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.fetch_coll_id{
+    height: 30vh;
+    width: 50%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin:10px;
+    color: white;
+}
+.fetch_coll_id h3{
+    width: 100%;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+}
+.fetch_coll_id div{
+    display: flex;
+    align-items: center;
+}
+.fetch_coll_id div p{
+    height: 40px;
+    display: grid;
+    place-items: center;
+}
+.fetch_coll_id div input{
+    width: 60%;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.fetch_coll_id button{
+    background-color: cadetblue;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#add_docter{
+    height: 50vh;
+}
+#not_fetched{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: cadetblue;
+    display: grid;
+    place-items: center;
+}
+#fetch_inner{
+    width: 30vw;
+    background-color: white;
+    border-radius: 10px;
+}
+#fetch_inner h2{
+    margin: 10px;
+    height: 30px;
+    color: brown;
+}
+#fetch_issus h4{
+    height: 30px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    font-size: 17px;
+}
+#fetch_issus li{
+    margin-left: 30px;
+    font-size: 17px;
+}
+#back_to_home{
+    height: 50px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+    border-top: 2px solid rgba(0, 0, 0, 0.492);
+}
+#back_to_home p{
+    font-size: 17px;
+    color: brown;
+}
+#collector_view{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+    overflow: scroll;
+}
+#collector_view_inner{
+    background-color: cadetblue;
+    border-radius: 10px;
+    width: 50vw;
+}
+#collector_view_inner h3{
+    height: 40px;
+    width: 50px;
+    background-color: brown;
+    color: black;
+    margin-top: 0px;
+    display: grid;
+    place-items: center;
+}
+#collector_view_inner p{
+    margin-left: 10px;
+    height: 25px;
+    font-size: 17px;
+}
+#collector_view_inner button{
+    margin: 20px;
+    background-color: darkolivegreen;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+#collector_view_inner h2{
+    height: 30px;
+    display: grid;
+    place-items: center;
+}
+#docter_alter{
+    display: flex;
+}

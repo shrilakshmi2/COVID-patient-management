@@ -1,0 +1,13 @@
+<div *ngIf="!fetched" id="not_fetched">
+    <div id='fetch_inner'>
+        <h2>Unable to fetch data :(</h2>
+        <div id="fetch_issus">
+            <h4>Probable issues</h4>
+            <li>Internet connection</li>
+            <li>Requested file do not exist</li>
+        </div>
+        <div id="back_to_home" (click)="back_to_home()">
+            <p>Back to home</p>
+        </div>
+    </div>
+</div>

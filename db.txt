@@ -1,0 +1,43 @@
+create table applications(
+app_id varchar(100) primary key,
+name text,
+adhar text,
+mobile text,
+email text,
+address text,
+time text,
+timeslot text,
+test_type text,
+applied_time text,
+
+status text,
+gender text,
+dob text
+);
+
+create table status_test(
+	app_id varchar(100) primary key,
+    email text,
+    result text,
+    doc_id varchar(100),
+    foreign key(app_id) references applications(app_id)
+);
+
+create table allloc(
+	doc_id  varchar(30) primary key,
+    app_id json
+);
+
+create table docter(
+	name text,
+    email varchar(100) primary key,
+    mobile text,
+    total integer
+);
+
+create table crd(
+id varchar(100) primary key,
+pass text
+);
+
+

@@ -1,0 +1,98 @@
+#testing_main{
+    display: flex;
+}
+#personaldetails,#timeslots{
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+#personaldetails{
+    width: 70%;
+}
+#personaldetails p{
+    margin-left: 10px;
+    height: 30px;
+    margin-bottom: 0px;
+    font-size: 17px;
+}
+#personaldetails input[type="text"]{
+    height: 30px;
+    font-size: 15px;
+    background-color: white;
+    border:1px solid rgba(0, 0, 0, 0.342);
+    border-radius: 5px;
+    color: black;
+    width: 90%;
+    margin-left: 20px;
+}
+#personaldetails div{
+    margin-left: 20px;   
+}
+#personaldetails div input{
+    margin-left: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+#personaldetails div label{
+    font-size: 17px;
+    cursor: pointer;
+}
+#personaldetails textarea{
+    margin-left: 20px;
+    resize: none;
+    width: 80%;
+    border-radius: 5px;
+}
+#personaldetails input[type="date"]{
+    margin-left: 20px;
+    height: 30px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+#timeslots{
+    width: 30%;
+}
+#timeslots div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+#timeslots p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#timeslots div p{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#timeslots  h4{
+    margin-bottom: 0px;
+}
+#timeslots input[type='date']{
+    margin-left: 20px;
+    margin-top: 5px;
+    height: 30px;
+    width: 200px;
+    cursor: pointer;
+}
+label{
+    cursor: pointer;
+}
+.date{
+    margin-left: 10px;
+}
+#timeslots button{
+    background-color: cadetblue;
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#timeslots div:nth-last-child(1){
+    display: flex;
+    flex-direction: row;
+}

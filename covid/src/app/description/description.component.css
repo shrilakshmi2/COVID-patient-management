@@ -1,0 +1,134 @@
+#navbar{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.689);
+    width: 100%;
+    height: 8vh;
+}
+#navbar div{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70%;
+    align-items: center;
+}
+#navbar h3{
+    width: 30%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    color: white;
+}
+#navbar div p{
+    margin-right: 20px;
+    color: whitesmoke;
+    font-size: 16px;
+    cursor: pointer;
+}
+#content_des{
+    overflow-y: scroll;
+    height: 92vh;
+}
+#content_des::-webkit-scrollbar{
+    display: none;
+}
+#front_page{
+background-color: lightblue;
+height: 30vh;
+display: grid;
+place-items: center;
+}
+#front_page h2{
+    display: grid;
+place-items: center;
+}
+#about{
+    display: grid;
+    place-items: center;
+}
+#about div{
+    height: 100vh;
+    width: 80%;
+}
+#about div h3{
+    font-size: 19px;
+}
+#about div li{
+    margin-top: 10px;
+    height: 40px;
+    font-size: 18px;
+
+}
+#about div ul ul{
+    margin-top: 20px;
+}
+#content_des h3{
+    color: blue;
+}
+#content_des .fr_h3{
+    color: black;
+}
+
+#symptoms{
+    display: grid;
+    place-items: center;
+}
+#symptoms div{
+    height: 90vh;
+    width: 80%;
+}
+#symptoms div h3{
+    font-size: 19px;
+}
+#symptoms div li{
+    margin-top: 10px;
+    height: 40px;
+    font-size: 18px;
+
+}
+#symptoms div ul ul{
+    margin-top: 20px;
+}
+
+/*  */
+#Prevention_des{
+    display: grid;
+    place-items: center;
+}
+#Prevention_des div{
+    height: 90vh;
+    width: 80%;
+}
+#Prevention_des div h3{
+    font-size: 19px;
+}
+#Prevention_des div li{
+    margin-top: 10px;
+    height: 50px;
+    font-size: 18px;
+
+}
+#Prevention_des div ul ul{
+    margin-top: 20px;
+}
+/*  */
+#live_updates{
+    display: grid;
+    place-items: center;
+}
+#live_updates div{
+    height: 150vh;
+    width: 80%;
+}
+#live_updates div h3{
+    font-size: 19px;
+}
+#live_updates div li{
+    margin-top: 10px;
+    height: 50px;
+    font-size: 18px;
+}
+#live_updates div ul ul{
+    margin-top: 20px;
+}
+#live_updates div .have_ul{
+    height: auto;
+}

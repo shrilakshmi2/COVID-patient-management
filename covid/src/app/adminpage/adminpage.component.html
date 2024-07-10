@@ -1,0 +1,174 @@
+<div *ngIf="main_mode==1000 && fetched" id="admin">
+    <div id="applications">
+        <h3 class="h3">Todays applications are here</h3>
+        <div id="search_bar">
+                <p (click)="chage_collecter_mode('1')" [class]="collector.class['1']">Id</p>
+                <p (click)="chage_collecter_mode('2')" [class]="collector.class['2']">Name</p>
+                <p (click)="chage_collecter_mode('3')" [class]="collector.class['3']">Mobile</p>
+                <p (click)="chage_collecter_mode('4')" [class]="collector.class['4']">Email</p>
+                <input type="text" #collecter_search_inp (input.enter)="collecter_search_btn.click()" placeholder="search here">
+                <button #collecter_search_btn (click)="collecter_search(collecter_search_inp.value)">Search</button>
+                <button (click)="collecter_reset()">Reset</button>
+        </div>
+        <div id="collecter_result">
+            <div class="applications_card" *ngFor="let item of collector.items;let i=index">
+                <h3>{{item['app_id']}}</h3>
+                <p>Name:> {{item['name']}}</p>
+                <p>Mobile:>{{item['mobile']}}</p>
+                <p>Email:>{{item['email']}}</p>
+                <p>Adhar:>{{item['adhar']}}</p>
+                <p>time-slot:>{{gettimeslot(item['timeslot'])}}</p>
+                <h3><button (click)="view(item)">Select</button></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="fetch_coll_id">
+        <h3>Fetch with application Id</h3>
+        <div>
+            <p>Application Id:</p>
+            <input type="text" #fetch>
+        </div>
+        <button (click)="search_fetch(fetch.value)">Search</button>
+    </div>
+    
+    <div id="docter_alter">
+        <div class="fetch_coll_id" id="add_docter">
+            <h3>Add docters</h3>
+            <div>
+                <p>Name</p>
+                <input type="text" placeholder="name" #dr_name>
+            </div>
+            <div>
+                <p>Mobile</p>
+                <input type="text" placeholder="mobile" #dr_mobile>
+            </div>
+            <div>
+                <p>Email</p>
+                <input type="text" placeholder="email" #dr_email>
+            </div>
+            <button (click)="add_docter(dr_name.value,dr_mobile.value,dr_email.value)">Add doctor</button>
+        </div>
+        <div class="fetch_coll_id" id="rm_docter">
+            <h3>Remove docter</h3>
+            <p>Docter ID</p>
+            <input type="text" placeholder="Id" #remove>
+            <button (click)="removedoc(remove.value)">Remove</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div *ngIf="main_mode==1001 && fetched" id="docter">
+    <div id="applications">
+        <h3 class="h3">Todays applications are here</h3>
+        <div id="search_bar">
+                <p (click)="chage_docter_mode('1')" [class]="docter.class['1']">Id</p>
+                <p (click)="chage_docter_mode('2')" [class]="docter.class['2']">Name</p>
+                <p (click)="chage_docter_mode('3')" [class]="docter.class['3']">Mobile</p>
+                <p (click)="chage_docter_mode('4')" [class]="docter.class['4']">Email</p>
+                <input type="text" #doc_search_inp (input.enter)="doc_search_btn.click()" placeholder="search here">
+                <button #doc_search_btn (click)="doc_search(doc_search_inp.value)">Search</button>
+                <button (click)="doc_reset()">Reset</button>
+        </div>
+        <div id="collecter_result">
+            <div class="applications_card" *ngFor="let item of docter.items;let i=index">
+                <h3>{{item['app_id']}}</h3>
+                <p>Name:> {{item['name']}}</p>
+                <p>Mobile:>{{item['mobile']}}</p>
+                <p>Email:>{{item['email']}}</p>
+                <p>Adhar:>{{item['adhar']}}</p>
+                <p>time-slot:>{{gettimeslot(item['timeslot'])}}</p>
+                <h3><button (click)="doc_view(item)">Select</button></h3>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h3>Update  Application</h3>
+        <p>Application Id</p>
+        <input type="text" placeholder="ID" #app_id> 
+        <button (click)="update_req(app_id.value)">Update</button>
+    </div>
+</div>
+
+
+<div *ngIf="!fetched" id="not_fetched">
+    <div id='fetch_inner'>
+        <h2>Unable to fetch data :(</h2>
+        <div id="fetch_issus">
+            <h4>Probable issues</h4>
+            <li>Internet connection</li>
+            <li>Server down</li>
+        </div>
+        <div id="back_to_home" (click)="back_to_home()">
+            <p>Back to home</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- abs -->
+<div *ngIf="collector.view" id="collector_view">
+    <div id="collector_view_inner">
+        <h3 (click)="view_reset()">X</h3>
+        <h2>{{collector.view_item['app_id']}}</h2>
+        <p>Name:> {{collector.view_item['name']}}</p>
+        <p>Mobile:>{{collector.view_item['mobile']}}</p>
+        <p>Email:>{{collector.view_item['email']}}</p>
+        <p>Adhar:>{{collector.view_item['adhar']}}</p>
+        <p>time-slot:>{{gettimeslot(collector.view_item['timeslot'])}}</p>
+        <p>gender:>{{collector.view_item['gender']}}</p>
+        <p>Test-type:> <strong>{{collector.view_item['test_type']}}</strong></p>
+        <p>D.O.B:> {{collector.view_item['dob']}}</p>
+        <p>Test date:>{{collector.view_item['time']}}</p>
+        <p>Address:>{{collector.view_item['address']}}</p>
+        <div>
+            <button (click)="mark_collected(collector.view_item['app_id'])">Collected</button>
+            <button (click)="view_reset()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="docter.view" id="collector_view">
+    <div id="collector_view_inner">
+        <h3 (click)="doc_view_reset()">X</h3>
+        <h2>{{docter.view_item['app_id']}}</h2>
+        <p>Name:> {{docter.view_item['name']}}</p>
+        <p>Mobile:>{{docter.view_item['mobile']}}</p>
+        <p>Email:>{{docter.view_item['email']}}</p>
+        <p>Adhar:>{{docter.view_item['adhar']}}</p>
+        <p>time-slot:>{{gettimeslot(docter.view_item['timeslot'])}}</p>
+        <p>gender:>{{docter.view_item['gender']}}</p>
+        <p>Test-type:> <strong>{{docter.view_item['test_type']}}</strong></p>
+        <p>D.O.B:> {{docter.view_item['dob']}}</p>
+        <p>Test date:>{{docter.view_item['time']}}</p>
+        <p>Address:>{{docter.view_item['address']}}</p>
+        <div>
+            <button (click)="mark_result(docter.view_item['app_id'],1,docter.view_item['email'])">Positive</button>
+            <button (click)="mark_result(docter.view_item['app_id'],2,docter.view_item['email'])">Negetive</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="update.status" id="collector_view">
+    <div id="collector_view_inner">
+        <h3 (click)="update_view_reset()">X</h3>
+        <h2>{{update.item['app_id']}}</h2>
+        <p>Name:> {{update.item['name']}}</p>
+        <p>Mobile:>{{update.item['mobile']}}</p>
+        <p>Email:>{{update.item['email']}}</p>
+        <p>Adhar:>{{update.item['adhar']}}</p>
+        <p>time-slot:>{{gettimeslot(update.item['timeslot'])}}</p>
+        <p>gender:>{{update.item['gender']}}</p>
+        <p>Test-type:> <strong>{{update.item['test_type']}}</strong></p>
+        <p>D.O.B:> {{update.item['dob']}}</p>
+        <p>Test date:>{{update.item['time']}}</p>
+        <p>Address:>{{update.item['address']}}</p>
+        <div>
+            <button (click)="update_result(update.item['app_id'],1,update.item['email'])">Positive</button>
+            <button (click)="update_result(update.item['app_id'],2,update.item['email'])">Negetive</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+#login_outer{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+#login_inner{
+    background-color: white;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    height: 40vh;
+    width: 40vw;display: flex;
+    flex-direction: column;
+}
+#login_inner h3{
+    height: 30px;
+    display: grid;
+    place-items: center;
+}
+#login_inner h3{
+    display: grid;
+    place-items: center;
+    margin-top: 0px;
+}
+#login_inner p{
+    font-size: 17px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+#login_inner input{
+    height: 30px;
+    font: 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    outline: none;
+    width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.442);
+}
+#login_inner button{
+    margin: 10px;
+    background-color: cadetblue;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#login_inner #buuton_h3{
+    margin: 0px;
+    height: 40px;
+}
